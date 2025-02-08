@@ -44,7 +44,7 @@ Config = {
             guides = {
                 {
                     title = "Starter Guide",
-                    description = "Lerne die Grundlagen des Servers",
+                    description = "Learn the basics of the server",
                     icon = "fas fa-info-circle",
                     image = "https://example.com/starter.jpg",
                 }
@@ -54,7 +54,7 @@ Config = {
             teleportmarkerlocations = {
                 { 
                     title = "Pit Stop", 
-                    description = "Hauptlocation", 
+                    description = "Main location", 
                     icon = "fas fa-warehouse",
                     location = vector4(922.71, -1551.09, 30.84, 85.57),
                     image = "https://example.com/location.jpg" 
@@ -65,7 +65,7 @@ Config = {
             extras = {
                 { 
                     title = "Premium Features",
-                    description = "Exklusive Zusatzfunktionen",
+                    description = "Exclusive additional features",
                     icon = "fas fa-crown",
                     image = "https://example.com/premium.jpg",
                     commandmenu = true,
@@ -74,7 +74,7 @@ Config = {
                 },
                 { 
                     title = "Event Features",
-                    description = "Spezielle Events",
+                    description = "Special events",
                     eventmenuicon = "fas fa-play-circle",
                     icon = "fas fa-calendar-star",
                     image = "https://example.com/event.jpg",
@@ -84,7 +84,7 @@ Config = {
                 },
                 { 
                     title = "Webhook Features",
-                    description = "Webhook Funktionen",
+                    description = "Webhook functions",
                     icon = "fas fa-cloud-upload-alt",
                     image = "https://example.com/event.jpg",
                     webhookmenu = true,
@@ -93,7 +93,7 @@ Config = {
                 },
                 { 
                     title = "Custom Events",
-                    description = "Spezielle Events",
+                    description = "Special events",
                     icon = "fas fa-bolt",
                     image = "https://example.com/event.jpg",
                     eventmenu = true,
@@ -102,7 +102,7 @@ Config = {
                 },
                 { 
                     title = "Export Features",
-                    description = "Export Funktionen",
+                    description = "Export functions",
                     icon = "fas fa-database",
                     image = "https://example.com/event.jpg",
                     exportmenu = true,
@@ -111,7 +111,7 @@ Config = {
                 },
                 { 
                     title = "VIP Teleport",
-                    description = "Exklusive Locations",
+                    description = "Exclusive locations",
                     icon = "fas fa-star",
                     image = "https://example.com/vip.jpg",
                     teleportmarkermenu = true,
@@ -119,8 +119,8 @@ Config = {
                     teleportmarker = true,
                     teleportmarkerlocations = {
                         { 
-                            title = "VIP Bereich", 
-                            description = "Privater Bereich", 
+                            title = "VIP Area", 
+                            description = "Private area", 
                             icon = "fas fa-lock",
                             location = vector4(-100.0, 200.0, 30.0, 180.0),
                             image = "https://example.com/vip_area.jpg" 
@@ -129,7 +129,7 @@ Config = {
                 },
                 { 
                     title = "Premium Items",
-                    description = "Exklusive Gegenstände",
+                    description = "Exclusive items",
                     icon = "fas fa-gem",
                     image = "https://example.com/items.jpg",
                     itemmenu = true,
