@@ -1,14 +1,26 @@
 # 📝DESCRIPTION
-A FiveM script that displays interactive gamertags above players, showing customizable info like name, job, ID, ping, and status, with support for masks, voice chat, and wanted levels. 
+A FiveM script that spawns interactive NPCs with customizable menus, allowing players to access tutorials, teleportation, commands, webhooks, and other features through a contextual UI. 
 
 Showcase:
 
 # ✨FEATURES
 CONFIG:
+- Multilocation npc -- (You can add more location)
+- Menuorder menu-- (Order of menu items)
+- Event menu-- (Name of the event to be triggered)
+- Browser menu -- (URL to be opened in the browser)
+- Webhook menu -- (Webhook URL for external notifications)
+- Command menu -- (Command to be executed on the client)
+- Export menu -- (Name of the export function)
+- Item menu -- (Name of the item)
+- Guide menu -- (Is the guide menu enabled?)
+- Teleport Marker menu -- (Is the teleport enabledmenu or marker enabled?)
+- Extra Menu -- (Is the extra menu enabled)
 
 # 🚨DEPENDENCY 
 - qb-core: https://github.com/qbcore-framework/qb-core
 - ox_lib: https://github.com/overextended/ox_lib
+- ox_inventory: https://github.com/overextended/ox_inventory
 
 # 📈ROADMAP
 - Export wanted stars 
