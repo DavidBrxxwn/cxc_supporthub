@@ -24,6 +24,8 @@ CONFIG:
 
 # 📈ROADMAP
 - Vote kick
+- Stuckcommand
+- Rest Char
 - Framework qbx and ESX
 
 # 🧠LINKS
