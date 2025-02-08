@@ -23,7 +23,7 @@ CONFIG:
 - ox_inventory: https://github.com/overextended/ox_inventory
 
 # 📈ROADMAP
-- Export wanted stars 
+- Vote kick
 - Framework qbx and ESX
 
 # 🧠LINKS
