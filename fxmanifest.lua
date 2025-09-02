@@ -12,7 +12,7 @@ shared_scripts {
 }
 
 client_scripts {
-	'client/*.lua'
+	'client.lua'
 }
 
 server_scripts {

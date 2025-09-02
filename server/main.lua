@@ -1,29 +1,6 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
-RegisterNetEvent('oxlib:triggerWebhook', function(webhookUrl, message)
-    local src = source
-    local player = QBCore.Functions.GetPlayer(src)
-    if not player or not message then return end
-
-    local embedData = {
-        {
-            title = "**NEUE SUPPORT-ANFRAGE**",
-            color = 16711680,
-            fields = {
-                {name = "Spieler", value = player.PlayerData.name, inline = true},
-                {name = "ID", value = src, inline = true},
-                {name = "Nachricht", value = message}
-            },
-            footer = {text = os.date('%d.%m.%Y %H:%M')}
-        }
-    }
-
-    PerformHttpRequest(webhookUrl, function(err, text, headers) end, 'POST', json.encode({embeds = embedData}), {['Content-Type'] = 'application/json'})
-end)
-
-local QBCore = exports['qb-core']:GetCoreObject()
-
-RegisterNetEvent('oxlib:triggerWebhook', function(webhookUrl, message)
+RegisterNetEvent('cxc_supporthub:triggerWebhook', function(webhookUrl, message)
     local src = source
     local player = QBCore.Functions.GetPlayer(src)
     if not player or not message then return end
@@ -44,7 +21,7 @@ RegisterNetEvent('oxlib:triggerWebhook', function(webhookUrl, message)
     PerformHttpRequest(webhookUrl, function(err, text, headers) end, 'POST', json.encode({embeds = embedData}), {['Content-Type'] = 'application/json'})
 end)
 
-RegisterNetEvent('oxlib:giveItem', function(item)
+RegisterNetEvent('cxc_supporthub:giveItem', function(item)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
 
