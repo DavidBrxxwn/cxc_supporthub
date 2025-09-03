@@ -7,15 +7,12 @@ Showcase: [Image](https://cdn.discordapp.com/attachments/1336972695438364774/133
 CONFIG:
 - Multilocation npc -- (You can add more location)
 - Menuorder menu-- (Order of menu items)
-- Event menu-- (Name of the event to be triggered)
-- Browser menu -- (URL to be opened in the browser)
 - Webhook menu -- (Webhook URL for external notifications)
 - Command menu -- (Command to be executed on the client)
 - Export menu -- (Name of the export function)
 - Item menu -- (Name of the item)
 - Guide menu -- (Is the guide menu enabled?)
 - Teleport Marker menu -- (Is the teleport enabledmenu or marker enabled?)
-- Extra Menu -- (Is the extra menu enabled)
 
 # 🚨DEPENDENCY 
 - qb-core: https://github.com/qbcore-framework/qb-core
@@ -25,6 +22,7 @@ CONFIG:
 # 📈ROADMAP
 - Vote kick
 - Stuckcommand
+- Chat
 - Rest Char
 - Framework qbx and ESX
 
