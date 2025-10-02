@@ -19,10 +19,12 @@ CONFIG:
 - ox_lib: https://github.com/overextended/ox_lib
 - ox_inventory: https://github.com/overextended/ox_inventory
 
-# 🧠LINKS
-- GTACars: https://gtacars.net/
-- GTAV Mods: https://www.gta5-mods.com/
-- Plebmasters: https://forge.plebmasters.de/
+# 📚HELPFUL LINKS
+- GTACars: https://gtacars.net/ (a complete database with detailed information about all vehicles)
+- GTAV Mods: https://www.gta5-mods.com/^(a database with addons such as vehicles, maps, graphics upgrades, and more)
+- Plebmasters: https://forge.plebmasters.de/ (a database with detailed information on props, clothing, and more)
+
+# 🧠FIVEM DOCS
 - FiveM Docs: https://docs.fivem.net/docs/
 - FiveM Natives: https://docs.fivem.net/natives/
 - Controls: https://docs.fivem.net/docs/game-references/controls/
