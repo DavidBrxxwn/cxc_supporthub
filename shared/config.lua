@@ -105,12 +105,12 @@ Config.Zones = {
                 metadata = { "Choose a destination to teleport." },
                 teleportwaypointlocations = {
                     [1] = { 
-                        title = "Pit Stop", -- Title of the teleport destination
+                        title = "LSPD", -- Title of the teleport destination
                         description = "Main location", -- Description
                         icon = "fas fa-warehouse", -- Icon for display
                         metadata = { "Main location" },
                         image = "https://example.com/location.jpg", -- Image for the destination
-                        location = vector4(922.71, -1551.09, 30.84, 85.57), -- Coordinates for the destination
+                        location = vector4(412.91, -980.58, 29.43, 87.53), -- Coordinates for the destination
                         arrow = true,
 
                         header = "Starter Guide", -- Header for the guide
