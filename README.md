@@ -20,8 +20,8 @@ CONFIG:
 - ox_inventory: https://github.com/overextended/ox_inventory
 
 # 📚HELPFUL LINKS
-- GTACars: https://gtacars.net/ (a complete database with detailed information about all vehicles)
 - GTAV Mods: https://www.gta5-mods.com/ (a database with addons such as vehicles, maps, graphics upgrades, and more)
+- GTACars: https://gtacars.net/ (a complete database with detailed information about all vehicles)
 - Plebmasters: https://forge.plebmasters.de/ (a database with detailed information on props, clothing, and more)
 
 # 🧠FIVEM DOCS
