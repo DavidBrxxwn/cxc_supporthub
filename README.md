@@ -2,7 +2,6 @@
 A FiveM script that spawns interactive NPCs with customizable menus, allowing players to access tutorials, teleportation, commands, webhooks, and other features through a contextual UI. 
 
 # ✨FEATURES
-CONFIG:
 - Multilocation npc -- (You can add more location)
 - Menuorder menu-- (Order of menu items)
 - Webhook menu -- (Webhook URL for external notifications)
@@ -12,12 +11,13 @@ CONFIG:
 - Guide menu -- (Is the guide menu enabled?)
 - Teleport Marker menu -- (Is the teleport enabledmenu or marker enabled?)
 
-# 🚨DEPENDENCY 
+# 📦FRAMEWORKS
 - qb-core (QBCore): https://github.com/qbcore-framework/qb-core
 - qbx_core (Qbox) https://github.com/Qbox-project/qbx_core
 - es_extended (ESX): https://github.com/esx-framework/esx_core
+
+# 🚨DEPENDENCY 
 - ox_lib: https://github.com/overextended/ox_lib
-- ox_inventory: https://github.com/overextended/ox_inventory
 
 # 📚HELPFUL LINKS
 - GTAV Mods: https://www.gta5-mods.com/
