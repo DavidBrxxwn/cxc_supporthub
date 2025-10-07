@@ -17,14 +17,14 @@ A FiveM script that spawns interactive NPCs with customizable menus, allowing pl
 - Blips -- Custom map blips for zones.
 - NPCs -- Configurable NPCs in zones (model, scenario, location, interaction distance).
 - Menus -- Multiple menu types per zone:
-— Webhook: Contact admin, send messages to support, with embed options.
-— Guide: Read guides and help texts with custom content, images, and metadata.
-— Teleport: Choose a destination and teleport or set a waypoint.
-— Command: Execute client commands from the menu.
-— Export: Trigger exports/functions from the menu.
-— Item: Receive items; can be limited to once per server restart.
+- Webhook: Contact admin, send messages to support, with embed options.
+- Guide: Read guides and help texts with custom content, images, and metadata.
+- Teleport: Choose a destination and teleport or set a waypoint.
+- Command: Execute client commands from the menu.
+- Export: Trigger exports/functions from the menu.
+- Item: Receive items; can be limited to once per server restart.
 - All menus are fully customizable (icon, title, description, metadata, options, events).
-- Extendable --Add more menus, guides, teleport locations, and features per zone.
+- Extendable -- Add more menus, guides, teleport locations, and features per zone.
 
 # 📦FRAMEWORKS
 - qb-core (QBCore): https://github.com/qbcore-framework/qb-core
