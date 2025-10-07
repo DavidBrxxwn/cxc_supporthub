@@ -2,21 +2,21 @@
 A FiveM script that spawns interactive NPCs with customizable menus, allowing players to access tutorials, teleportation, commands, webhooks, and other features through a contextual UI. 
 
 # ✨FEATURES
-- Debug — Debug mode: true enables debug messages, false disables them.
-- Locale — Language setting: 'en' for English, 'de' for German, 'fr' for French, 'es' for Spanish.
-- Framework — Framework selection: 'qb' for QBCore, 'qbox' for QBox Framework, or 'esx' for ESX.
-- Menu — Menu system: "ox" for ox_lib context menus, "qb" for qb-menu.
+- Debug -- Debug mode: true enables debug messages, false disables them.
+- Locale -- Language setting: 'en' for English, 'de' for German, 'fr' for French, 'es' for Spanish.
+- Framework -- Framework selection: 'qb' for QBCore, 'qbox' for QBox Framework, or 'esx' for ESX.
+- Menu -- Menu system: "ox" for ox_lib context menus, "qb" for qb-menu.
 - Inventory — Inventory system: "ox" for ox_inventory, "qb" for qb-inventory.
-- Target — Target system: "ox" for ox_target, "qb" for qb-target, or disabled.
-- TextUI — TextUI system: "ox" for ox_lib TextUI, "qb" for QBCore TextUI, or disabled.
-- Notification — Notification system: "ox" for ox_lib, "qb" for QBCore, "qbx" for QBox, "esx" for ESX, or "gta" for native GTA.
-- NotificationPosition — Notification position: "top", "top-right", "top-left", "bottom", "bottom-right", "bottom-left", "center-right".
-- NotificationStyle — Notification style: works only for "ox", default or custom CSS object.
-- Locations — Define interactive zones with coordinates, radius, custom notifications, blips, NPCs, and menus.
-- Zone Notifications — Custom notifications when entering or leaving defined zones.
-- Blips — Custom map blips for zones.
-- NPCs — Configurable NPCs in zones (model, scenario, location, interaction distance).
-- Menus — Multiple menu types per zone:
+- Target -- Target system: "ox" for ox_target, "qb" for qb-target, or disabled.
+- TextUI -- TextUI system: "ox" for ox_lib TextUI, "qb" for QBCore TextUI, or disabled.
+- Notification -- Notification system: "ox" for ox_lib, "qb" for QBCore, "qbx" for QBox, "esx" for ESX, or "gta" for native GTA.
+- NotificationPosition -- Notification position: "top", "top-right", "top-left", "bottom", "bottom-right", "bottom-left", "center-right".
+- NotificationStyle -- Notification style: works only for "ox", default or custom CSS object.
+- Locations -- Define interactive zones with coordinates, radius, custom notifications, blips, NPCs, and menus.
+- Zone Notifications -- Custom notifications when entering or leaving defined zones.
+- Blips -- Custom map blips for zones.
+- NPCs -- Configurable NPCs in zones (model, scenario, location, interaction distance).
+- Menus -- Multiple menu types per zone:
     — Webhook: Contact admin, send messages to support, with embed options.
     — Guide: Read guides and help texts with custom content, images, and metadata.
     — Teleport: Choose a destination and teleport or set a waypoint.
@@ -24,7 +24,7 @@ A FiveM script that spawns interactive NPCs with customizable menus, allowing pl
     — Export: Trigger exports/functions from the menu.
     — Item: Receive items; can be limited to once per server restart.
 - All menus are fully customizable (icon, title, description, metadata, options, events).
-- Extendable — Add more menus, guides, teleport locations, and features per zone.
+- Extendable --Add more menus, guides, teleport locations, and features per zone.
 
 # 📦FRAMEWORKS
 - qb-core (QBCore): https://github.com/qbcore-framework/qb-core
