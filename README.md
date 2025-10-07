@@ -1,8 +1,6 @@
 # 📝DESCRIPTION
 A FiveM script that spawns interactive NPCs with customizable menus, allowing players to access tutorials, teleportation, commands, webhooks, and other features through a contextual UI. 
 
-Showcase: [Image](https://cdn.discordapp.com/attachments/1336972695438364774/1336972695589617665/20250206085847_1.jpg?ex=67a7ba9a&is=67a6691a&hm=089f5f28feb45443ca3d425fa5196e95ba3ce2fa5c11966448a2f457be4bbcc8&)
-
 # ✨FEATURES
 CONFIG:
 - Multilocation npc -- (You can add more location)
