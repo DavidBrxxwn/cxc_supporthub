@@ -13,7 +13,10 @@ CONFIG:
 - Teleport Marker menu -- (Is the teleport enabledmenu or marker enabled?)
 
 # 🚨DEPENDENCY 
-- qb-core: https://github.com/qbcore-framework/qb-core
+- qb-core (QBCore): https://github.com/qbcore-framework/qb-core
+- qbx_core (Qbox) https://github.com/Qbox-project/qbx_core
+- es_extended (ESX): https://github.com/esx-framework/esx_core
+
 - ox_lib: https://github.com/overextended/ox_lib
 - ox_inventory: https://github.com/overextended/ox_inventory
 
