@@ -2,34 +2,31 @@
 -- Discord: https://discord.com/invite/EcpCFyX4DC
 
 Config = {}
-Config.Debug = true
-Config.Framework = "qb-core" -- qb-core
-Config.Target = "ox_target" -- qb-core
 
-Config.Notification = {
-    position = "top",  -- e.g. "top-right", "top-left", "bottom-right", "bottom-left", "center-right", etc. or false for ox_lib default
-    style = false,
-    --[[
-    style = {
-        backgroundColor = "#000000ff", -- Background color (Hex/CSS)
-        color = "#ffffff",           -- Text color (Hex/CSS)
-        borderRadius = "8px",        -- Corner radius
-        fontSize = "16px",           -- Font size
-        -- more CSS properties as needed!
-    } -- or false, then ox_lib default will be used --]]
-}
+Config.Debug = false -- Debug mode: true enables debug messages, false disables them
+Config.Locale = 'en' -- Language setting: 'en' for English, 'de' for German, 'fr' for French, 'es' for Spanish
+Config.Framework = 'qb' -- Framework selection: 'qb' for QBCore, 'qbox' for QBox Framework, or 'esx' for ESX
 
-Config.Zones = {
+Config.Menu = "ox" -- Menu system: "ox" for ox_lib context menus, "qb" for qb-menu
+Config.Inventory = "ox" -- Inventory system: "ox" for ox_inventory, "qb" for qb-inventory  
+Config.Target = "ox" -- Target system: "ox" for ox_target, "qb" for qb-target, or false for disabled
+Config.TextUI = false -- TextUI system: "ox" for ox_lib TextUI, "qb" for QBCore TextUI, or false for disabled
+
+Config.Notification = "ox" -- Notification system: "ox" for ox_lib, "qb" for QBCore, "qbx" for QBox, "esx" for ESX, or "gta" for native GTA
+Config.NotificationPosition = "top" -- Notification position: "top", "top-right", "top-left", "bottom", "bottom-right", "bottom-left", "center-right"
+Config.NotificationStyle = false -- Notification style: works only for "ox", false for default or CSS object like { backgroundColor = "#000000ff", color = "#ffffff" }
+
+Config.Locations = {
     [1] = {
-        id = "zone1",
+        id = "support_zone", -- Unique identifier for the zone
         zone = {
             coords = vector4(-1299.52, -3407.39, 13.94, 333.39),
             radius = 5.0
         },
         notifications = {
             title = "Notice",
-            enter = "You are now in Showroom 3.",
-            leave = "You have left Showroom 3."
+            enter = "Support Zone entered.",
+            leave = "Support Zone exited."
         }, -- or false,
         blips = {
             [1] = {
@@ -105,12 +102,12 @@ Config.Zones = {
                 metadata = { "Choose a destination to teleport." },
                 teleportwaypointlocations = {
                     [1] = { 
-                        title = "LSPD", -- Title of the teleport destination
+                        title = "Main Location", -- Title of the teleport destination
                         description = "Main location", -- Description
                         icon = "fas fa-warehouse", -- Icon for display
                         metadata = { "Main location" },
                         image = "https://example.com/location.jpg", -- Image for the destination
-                        location = vector4(412.91, -980.58, 29.43, 87.53), -- Coordinates for the destination
+                        location = vector4(-1311.27, -3405.16, 13.94, 329.4), -- Coordinates for the destination
                         arrow = true,
 
                         header = "Starter Guide", -- Header for the guide
