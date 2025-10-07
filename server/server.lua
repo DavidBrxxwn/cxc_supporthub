@@ -1,15 +1,50 @@
--- Author: David Brxxwn | Cxmmunity Club
--- Discord: https://discord.com/invite/EcpCFyX4DC
+local QBCore, ESX, QBox = nil, nil, nil
 
-local QBCore = exports['qb-core']:GetCoreObject()
+local _ = function(key, ...) return _(key, ...) end
+local function InitializeFramework()
+    if Config.Framework == 'qb' then
+        QBCore = exports['qb-core']:GetCoreObject()
+        if Config.Debug then
+            print('Framework loaded: QBCore')
+        end
+    elseif Config.Framework == 'qbox' then
+        QBox = exports.qbx_core
+        if Config.Debug then
+            print('Framework loaded: QBox')
+        end
+    elseif Config.Framework == 'esx' then
+        ESX = exports['es_extended']:getSharedObject()
+        if Config.Debug then
+            print('Framework loaded: ESX')
+        end
+    else
+        if Config.Debug then
+            print('Framework error: ' .. Config.Framework)
+        end
+    end
+end
+
+Citizen.CreateThread(function()
+    InitializeFramework()
+end)
+local function GetPlayerData(src)
+    if Config.Framework == 'qb' and QBCore then
+        return QBCore.Functions.GetPlayer(src)
+    elseif Config.Framework == 'qbox' and QBox then
+        return QBox:GetPlayer(src)
+    elseif Config.Framework == 'esx' and ESX then
+        return ESX.GetPlayerFromId(src)
+    end
+    return nil
+end
 
 RegisterNetEvent('cxc_supporhub:triggerWebhook', function(webhookUrl, message)
     local src = source
-    local player = QBCore.Functions.GetPlayer(src)
+    local player = GetPlayerData(src)
     if not player or not message then return end
 
     local embedConfig
-    for _, zone in pairs(Config.Zones) do
+    for _, zone in pairs(Config.Locations) do
         for _, menu in ipairs(zone.menus) do
             if menu.name == "webhook" and menu.webhookurl == webhookUrl then
                 embedConfig = menu.embed
@@ -20,7 +55,14 @@ RegisterNetEvent('cxc_supporhub:triggerWebhook', function(webhookUrl, message)
     end
 
     local function replaceVars(str)
-        return str:gsub("{player}", player.PlayerData.name)
+        local playerName = ""
+        if Config.Framework == 'qb' or Config.Framework == 'qbox' then
+            playerName = player.PlayerData.charinfo.firstname .. " " .. player.PlayerData.charinfo.lastname
+        elseif Config.Framework == 'esx' then
+            playerName = player.getName()
+        end
+        
+        return str:gsub("{player}", playerName)
                   :gsub("{id}", tostring(src))
                   :gsub("{message}", message)
                   :gsub("{date}", os.date('%d.%m.%Y %H:%M'))
@@ -57,7 +99,7 @@ local claimedItems = {}
 
 RegisterNetEvent('cxc_supporhub:giveItem', function(data)
     local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
+    local Player = GetPlayerData(src)
     if not Player then return end
 
     local itemData = data.item
@@ -70,8 +112,8 @@ RegisterNetEvent('cxc_supporhub:giveItem', function(data)
         claimedItems[src] = claimedItems[src] or {}
         if claimedItems[src][itemName] then
             TriggerClientEvent('ox_lib:notify', src, {
-                title = 'Not claimable',
-                description = 'You have already claimed this item!',
+                title = _('not_claimable'),
+                description = _('already_claimed'),
                 type = 'error'
             })
             return
@@ -79,18 +121,42 @@ RegisterNetEvent('cxc_supporhub:giveItem', function(data)
         claimedItems[src][itemName] = true
     end
 
-    if exports.ox_inventory:Items(itemName) then
-        exports.ox_inventory:AddItem(src, itemName, itemAmount)
-        TriggerClientEvent('ox_lib:notify', src, {
-            title = 'Item received',
-            description = ('You received %sx %s'):format(itemAmount, itemLabel),
-            type = 'success'
-        })
+    local success = false
+    if Config.Inventory == 'ox' then
+        if exports.ox_inventory:Items(itemName) then
+            exports.ox_inventory:AddItem(src, itemName, itemAmount)
+            success = true
+        end
+    elseif Config.Inventory == 'qb' then
+        if Config.Framework == 'qb' or Config.Framework == 'qbox' then
+            if Player and Player.Functions then
+                success = Player.Functions.AddItem(itemName, itemAmount)
+                if success then
+                    TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[itemName], 'add')
+                end
+            end
+        end
+    end
+    
+    if success then
+        if Config.Notification == 'ox' then
+            TriggerClientEvent('ox_lib:notify', src, {
+                title = _('item_received'),
+                description = _('received_items', itemAmount, itemLabel),
+                type = 'success'
+            })
+        elseif Config.Notification == 'qb' then
+            TriggerClientEvent('QBCore:Notify', src, _('received_items', itemAmount, itemLabel), 'success')
+        end
     else
-        TriggerClientEvent('ox_lib:notify', src, {
-            title = 'Error',
-            description = 'This item does not exist!',
-            type = 'error'
-        })
+        if Config.Notification == 'ox' then
+            TriggerClientEvent('ox_lib:notify', src, {
+                title = _('error'),
+                description = _('item_not_exist'),
+                type = 'error'
+            })
+        elseif Config.Notification == 'qb' then
+            TriggerClientEvent('QBCore:Notify', src, _('item_not_exist'), 'error')
+        end
     end
 end)
