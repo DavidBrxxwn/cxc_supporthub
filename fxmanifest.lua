@@ -1,14 +1,16 @@
 fx_version 'cerulean'
 game 'gta5'
-lua54 'yes'
 
 author 'David Brxxwn | Cxmmunity Club'
-description 'cxc_supporthub | https://discord.com/invite/EcpCFyX4DC'
+discord 'https://discord.com/invite/EcpCFyX4DC'
+
+name 'cxc_supporthub'
+description 'Support Hub with QBCore, QBox and ESX Framework support'
 version '2.0.0'
 
 shared_scripts {
 	"@ox_lib/init.lua",
-	"shared/*.lua'
+	"shared/*.lua",
 }
 
 client_scripts {
@@ -18,4 +20,3 @@ client_scripts {
 server_scripts {
 	'server/*.lua'
 }
-
